@@ -32,4 +32,4 @@ common_rows_df = pd.DataFrame(common_rows, columns=df1.columns)
 
 common_rows_df.to_excel('comparison.xlsx', index=False)
 
-print("Сравнение завершено. Результаты сохранены в 'common_rows.xlsx'.")
+print("Результаты сохранены в 'comparison.xlsx'.")
