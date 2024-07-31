@@ -11,7 +11,7 @@ soup = BeautifulSoup(html_content, "html.parser")
 table = soup.find("table")
 
 if table is None:
-    print("Таблица не найдена. Проверьте URL и HTML-структуру.")
+    print("Таблица не найдена.")
 else:
     rows = table.find_all("tr")
 
