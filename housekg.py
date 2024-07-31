@@ -5,11 +5,11 @@ from openpyxl import Workbook
 def extract_data_from_page(soup, ws, start_row, seen_titles):
     main_block = soup.find("div", class_="buildings-table")
     if not main_block:
-        print("Не удалось найти основной блок с объявлениями.")
+        print("Не удалось найти блок с объявлениями.")
         return start_row
 
     listings = main_block.find_all("div", class_="building-item")
-    print(f"Найдено {len(listings)} блоков объявлений на странице.")
+    print(f"Найдено {len(listings)} объявлений на странице.")
 
     for listing in listings:
         try:
@@ -76,4 +76,4 @@ while page <= max_pages:
 
 excel_file = "housekg.xlsx"
 wb.save(excel_file)
-print(f"Excel файл сохранен как {excel_file}")
+print(f"Файл сохранен как {excel_file}")
